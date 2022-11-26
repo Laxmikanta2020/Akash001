@@ -13,8 +13,11 @@ import com.laxmi.binding.Pet;
 @RestController
 public class ExampleRestClient {
 	
+	
 	@GetMapping("/pet/{petId}")
 	public Pet getPet(@PathVariable("petId")Integer petId)  {
+		String s="laxmikanta";
+		//laxmikanta
 		String url="https://vur3ednzag.execute-api.ap-south-1.amazonaws.com/prod/pets/{petId}";
 		RestTemplate rt=new RestTemplate();
 		ResponseEntity<Pet> forEntity = rt.getForEntity(url, Pet.class,petId);
